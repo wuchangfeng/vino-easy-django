@@ -1,19 +1,30 @@
-{% extends 'blog/base.html' %}
 
+
+<!--顶部圆形头像-->
+<div class="avatar_div">
+    <a href="/about.html">
+    <!--<a href="http://allenwu.pythonanywhere.com/about.html">-->
+    <img src="http://ww3.sinaimg.cn/large/b10d1ea5jw1f95jk0irbmj20dw0dwq3h.jpg" class="avatar"/>
+    </a>
+</div>
+<!--引入 base 文件-->
+{% extends 'blog/base.html' %}
+<!--实现复写-->
 {% block content %}
 {% for post in posts %}
 <div class="post">
 
-    <div class="date">
-        {{ post.published_date }}
-    </div>
-
-
+    <!--文章标题-->
     <h1>
         <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
     </h1>
-
+    <!--文章日期-->
+    <div class="date">
+        {{ post.published_date }}
+    </div>
+    <!--文章内容
     <p>{{ post.text|linebreaksbr }}</p>
+    -->
 </div>
 {% endfor %}
 {% endblock content %}

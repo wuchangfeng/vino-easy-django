@@ -4,13 +4,19 @@ from .models import Post
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
+import markdown2
+
+
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    #for post in posts:
+    #    post = markdown2.markdown(post,)
     return render(request, 'blog/post_list.html', {'posts': posts})
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
+    #post = markdown2.markdown(post, )
     return render(request, 'blog/post_detail.html', {'post': post})
 
 def post_new(request):

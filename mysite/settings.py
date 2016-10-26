@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'markdown2',# 支持 markdwon
+    'pygments', # 添加进来
 ]
 
 MIDDLEWARE_CLASSES = [

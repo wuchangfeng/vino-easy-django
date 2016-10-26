@@ -6,21 +6,11 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <!--引入 github 风格语法高亮-->
+    <link rel="stylesheet" href="{% static 'blog/css/pygments/github.css' %}">
 </head>
 <body>
-<!--
-<div class="page-header">
-    {% if user.is_authenticated %}
-    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-    {% endif %}
-    <h1><a href="/">Django Blog</a></h1>
-</div>
--->
-<div class="avatar_div">
-    <!--<a href="http://wu.github.io/me.html">-->
-        <img src="http://ww3.sinaimg.cn/large/b10d1ea5jw1f95jk0irbmj20dw0dwq3h.jpg" class="avatar"/>
-    </a>
-</div>
+<!--正文-->
 <div >
     <div>
         <div>
