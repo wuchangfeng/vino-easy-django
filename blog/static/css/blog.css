@@ -1,63 +1,55 @@
- h1 a {
-        color: #FCA205;
-        font-family: 'Lobster';
+.h1 a {
+        margin: 0 auto;
+        text-align:center;
+        color: #828282;
     }
 
   h2 a {
 
-         font-family: 'Lobster';
      }
 
  body {
-
-            text-align:center;
+        font-family: "Helvetica", "Arial", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "sans-serif";
+        padding: 20px;
+        margin: 0;
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
+        @media (min-width: 992px) {
+             padding: 35px 50px;
+        }
     }
 
+ .avatar_div {
+     display: block;
+     height: 120px;
+     width: 120px;
+     margin: 0 auto;
+     text-align:center;
+ }
+ .avatar {
+        height: 120px;
+        width: 120px;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+ }
 
- .page-header {
-        background-color: #ff9400;
-        margin-top: 0;
-        padding: 20px 20px 20px 40px;
-    }
-
-    .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-        color: #ffffff;
-        font-size: 36pt;
-        text-decoration: none;
-    }
-
-    .content {
-        margin-left: 40px;
-    }
-
-    h1, h2, h3, h4 {
-        font-family: 'Lobster', cursive;
-    }
-
-    .date {
-        float: right;
-        color: #828282;
-    }
-
-    .save {
-        float: right;
-    }
-
-    .post-form textarea, .post-form input {
-        width: 100%;
-    }
-
-    .top-menu, .top-menu:hover, .top-menu:visited {
-        color: #ffffff;
-        float: right;
-        font-size: 26pt;
-        margin-right: 20px;
-    }
-
-    .post {
-        margin-bottom: 70px;
-    }
-
-    .post h1 a, .post h1 a:visited {
-        color: #000000;
-    }
+ .date {
+         float: bottom;
+         color: #828282;
+     }
+ .post {
+         font-size: 1em;
+         line-height: 1.68;
+         width: 60%;
+         letter-spacing: 0.03em;
+         color: #535353;
+         font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+         font-weight: 400;
+         -webkit-font-smoothing: antialiased;
+         margin-bottom: 70px;
+         margin-top: 20px;
+         text-align:center;
+         margin:0px auto;
+     }
