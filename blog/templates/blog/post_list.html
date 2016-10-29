@@ -11,20 +11,22 @@
 {% extends 'blog/base.html' %}
 <!--实现复写-->
 {% block content %}
+
 {% for post in posts %}
+
 <div class="post">
 
-    <!--文章标题-->
-    <h1>
+    <h2>
         <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
-    </h1>
-    <!--文章日期-->
+    </h2>
+
     <div class="date">
         {{ post.published_date }}
     </div>
-    <!--文章内容
+    <!--
     <p>{{ post.text|linebreaksbr }}</p>
     -->
 </div>
+
 {% endfor %}
 {% endblock content %}
