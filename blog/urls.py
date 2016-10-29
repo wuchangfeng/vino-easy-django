@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^post/new/$', views.post_new, name='post_new'),
     url(r'^post/(?P<pk>[0-9]+)/edit/$', views.post_edit, name='post_edit'),
     url(r'^qrcode/(.+)$', views.generate_qrcode, name='qrcode'),
+    url(r'^aboutme/', views.about_me, name='about_me'),
 ]

@@ -1,0 +1,11 @@
+.h1 a {
+        margin: 0 auto;
+        text-align:center;
+        color: #828282;
+    }
+
+ h2 a {
+         text-align:left;
+         color: #828282;
+         font-size:25px;
+     }

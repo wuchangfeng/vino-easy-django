@@ -2,8 +2,7 @@
 
 <!--顶部圆形头像-->
 <div class="avatar_div">
-    <a href="/about.html">
-    <!--<a href="http://allenwu.pythonanywhere.com/about.html">-->
+    <a href="/aboutme">
     <img src="http://ww3.sinaimg.cn/large/b10d1ea5jw1f95jk0irbmj20dw0dwq3h.jpg" class="avatar"/>
     </a>
 </div>
@@ -21,7 +20,7 @@
     </h2>
 
     <div class="date">
-        {{ post.published_date }}
+        {{ post.date_time|date:"Y /m /d"}}
     </div>
     <!--
     <p>{{ post.text|linebreaksbr }}</p>

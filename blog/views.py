@@ -12,22 +12,28 @@ from io import StringIO
 import io
 
 def generate_qrcode(request, data):
+    '''
+    :param request:
+    :param data:
+    :return:
+    '''
     img = qrcode.make(data)
-
     buf = BytesIO()
     img.save(buf)
     image_stream = buf.getvalue()
-
     response = HttpResponse(image_stream, content_type="image/png")
     response['Last-Modified'] = 'Mon, 27 Apr 2015 02:05:03 GMT'
     response['Cache-Control'] = 'max-age=31536000'
     return response
 
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    #for post in posts:
-    #    post = markdown2.markdown(post,)
+    '''
+    :param request:
+    :return:
+    '''
+    posts = Post.objects.all()
     return render(request, 'blog/post_list.html', {'posts': posts})
+
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
@@ -40,7 +46,7 @@ def post_new(request):
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
-            post.published_date = timezone.now()
+            post.date_time = timezone.now()
             post.save()
             return redirect('blog.views.post_detail', pk=post.pk)
     else:
@@ -54,9 +60,12 @@ def post_edit(request, pk):
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
-            post.published_date = timezone.now()
+            post.date_time = timezone.now()
             post.save()
             return redirect('blog.views.post_detail', pk=post.pk)
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+def about_me(request) :
+    return render(request, 'blog/aboutme.html')

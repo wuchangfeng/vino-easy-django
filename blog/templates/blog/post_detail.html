@@ -1,14 +1,29 @@
 {% extends 'blog/base.html' %}
-
+{% load custom_markdown %}
 {% block content %}
+
+
 <div class="post">
-    {% if post.published_date %}
-    <div class="date">
-        {{ post.published_date }}
-    </div>
-    {% endif %}
-    <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-    <h1>{{ post.title }}</h1>
-    <p>{{ post.text|linebreaksbr }}</p>
+    <section class="post">
+
+        <p class="post-meta">
+            Time:  <a class="post-author" href="#">{{ post.date_time|date:"Y /m /d"}}</a>
+        </p>
+
+
+    <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}">
+        <span class="glyphicon glyphicon-pencil"></span>
+    </a>
+
+    <h2>{{ post.title }}</h2>
+
+    <p>{{ post.text|custom_markdown }}</p>
+    </section>
+    </section>
+    <!--
+    {% include "blog/duoshuo.html" %}
+    -->
 </div>
 {% endblock %}
+
+
