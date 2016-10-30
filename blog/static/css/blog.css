@@ -10,6 +10,38 @@
          font-size:25px;
      }
 
+
+H3 {
+    margin: 24px 0 12px;
+    font-size: 1.3em;
+    border-left: 5px solid #3d4b55;
+    /*border-bottom: 4px double #3d4b55;*/
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    background: #efefef;
+    color: #3d4b55;
+    line-height: 1.5;
+}
+
+H4 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    width: 100%;
+    font: blod;
+    font-size: 1.25em;
+    color: #4c4c4c;
+    line-height: 120%;
+}
+
+H5 {
+    margin-top: 10px;
+    margin-bottom: -5px;
+    color: #5d5d60;
+    font-size: 1.08em;
+    line-height: 1.4;
+}
+
  body {
         font-family: "Helvetica", "Arial", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "sans-serif";
         padding: 20px;
@@ -22,6 +54,29 @@
         }
     }
 
+.title {
+    width: 100%;
+    font-size: 1.08em;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #333333;
+    font-weight: 400;
+    text-align:right;
+}
+.date {
+    width: 100%;
+    font-size: 3.08em;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666666;
+    font-weight: 400;
+    text-align:center;
+}
+
  .avatar_div {
      display: block;
      height: 120px;
@@ -29,27 +84,6 @@
      margin: 0px auto;
      text-align:center;
  }
-
-
-
- .date {
-         float: bottom;
-         color: #828282;
-     }
- .post {
-         font-size: 1em;
-         line-height: 1.68;
-         width: 30%;
-         letter-spacing: 0.03em;
-         color: #535353;
-         font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
-         font-weight: 400;
-         -webkit-font-smoothing: antialiased;
-         margin-bottom: 70px;
-         margin: 50px auto;
-     }
-
-
  .avatar {
    float:left;
    margin-right:8px;

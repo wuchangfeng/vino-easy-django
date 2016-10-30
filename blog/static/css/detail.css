@@ -1,11 +1,107 @@
-.h1 a {
-        margin: 0 auto;
-        text-align:center;
-        color: #828282;
-    }
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang-SC-Regular", "STHeiti", "Helvetica", "Arial", "Verdana", "sans-serif", "Microsoft YaHei";
+}
 
- h2 a {
-         text-align:left;
-         color: #828282;
-         font-size:25px;
-     }
+
+.content {
+    font-size: 1em;
+    line-height: 1.68;
+    background: ghostwhite;
+    display: block;
+    padding: 2% 10% 5% 10%;
+    width: 80%;
+    margin: 75px 10% 0;
+    letter-spacing: 0.03em;
+    color: #535353;
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.title {
+    width: 100%;
+    font-size: 1.08em;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #333333;
+    font-weight: 400;
+    text-align:center;
+}
+
+.date {
+    width: 100%;
+    font-size: 1.08em;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #333333;
+    font-weight: 400;
+    text-align:center;
+}
+
+
+.footer {
+    padding: 24px 0;
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.8em;
+    -webkit-font-smoothing: antialiased;
+}
+
+H2 {
+    margin-bottom: 60px;
+    padding: 5px;
+    border-bottom: 2px LightGrey solid;
+    width: 100%;
+    font-size: 1.5em;
+    line-height: 120%;
+    color: #666666;
+}
+
+H3 {
+    margin: 24px 0 12px;
+    font-size: 1.3em;
+    border-left: 5px solid #3d4b55;
+    /*border-bottom: 4px double #3d4b55;*/
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    background: #efefef;
+    color: #3d4b55;
+    line-height: 1.5;
+}
+
+H4 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    width: 100%;
+    font: blod;
+    font-size: 1.25em;
+    color: #4c4c4c;
+    line-height: 120%;
+}
+
+H5 {
+    margin-top: 10px;
+    margin-bottom: -5px;
+    color: #5d5d60;
+    font-size: 1.08em;
+    line-height: 1.4;
+}
+
+code {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    color: #e65c04;
+    letter-spacing: 0;
+    font-size: 85%;
+}
+
